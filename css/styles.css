@@ -10,7 +10,18 @@
   --third-bg-color: #f5f4fa;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
+  margin: 0;
   font-family: "Roboto", sans-serif;
   color: var(--first-text-color);
   background-color: var(--current-white-color);
