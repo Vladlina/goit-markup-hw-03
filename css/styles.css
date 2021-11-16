@@ -8,6 +8,8 @@
   --logo-color: #000000;
   --second-bg-color: #2f303a;
   --third-bg-color: #f5f4fa;
+  --line-color: #ececec;
+  --border-color: #eeeeee;
 }
 
 html {
@@ -49,6 +51,8 @@ button {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 address {
@@ -71,16 +75,15 @@ address {
 
 /* -------------------------------- Header---------------------------- */
 
-.header {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
 .container {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+}
+
+.header {
+  border-bottom: 1px solid var(--line-color);
 }
 
 .header-list {
@@ -100,6 +103,8 @@ address {
 .header-contact-info {
   display: flex;
   margin-left: auto;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header-container {
@@ -128,6 +133,8 @@ address {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--main-title-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .current {
@@ -139,8 +146,6 @@ address {
 .header-link:focus,
 .header-contact-info-link:focus {
   color: var(--accent-color);
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 
 .mail-phone-info:hover,
@@ -154,6 +159,8 @@ address {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--first-text-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .header-logo {
   font-family: "Raleway", sans-serif;
@@ -314,7 +321,6 @@ address {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-title-color);
-  padding-top: 30px;
   margin: 0 0 10px 0;
 }
 
@@ -325,6 +331,10 @@ address {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--first-text-color);
+}
+
+.our-team-data {
+  padding-top: 30px;
   padding-bottom: 30px;
 }
 
@@ -388,6 +398,10 @@ address {
 
 .filter-button {
   cursor: pointer;
+  min-height: 38px;
+  min-width: 73px;
+  padding-left: 22px;
+  padding-right: 22px;
   font-family: inherit;
   font-style: inherit;
   font-weight: 500;
@@ -398,11 +412,7 @@ address {
   background-color: var(--third-bg-color);
   border: 0;
   border-radius: 4px;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-
-  min-width: 73px;
 }
 
 .filter-button:hover,
@@ -416,10 +426,19 @@ address {
 
 .filter-list {
   display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 
-.filter-list > filter.item:not(:last-child) {
+.filter-item {
+  text-align: -webkit-match-parent;
+}
+
+.filter-list .filter-item:not(:last-child) {
   margin-right: 8px;
+}
+
+.filter-button {
 }
 
 .cards-list {
@@ -430,12 +449,22 @@ address {
 .cards-item {
   width: 370px;
   margin-right: 30px;
+}
 
-  background-color: tomato;
+.cards-item .card-data {
+  border: 1px solid var(--border-color);
+  border-top: 1px solid transparent;
+  padding: 20px 24px;
+  margin-bottom: 30px;
 }
 
 .cards-item:nth-child(3n) {
   margin-right: 0px;
+}
+
+.card-data {
+  padding: 20px 24px;
+  text-align: left;
 }
 
 .cards-title {
@@ -447,7 +476,6 @@ address {
 }
 
 .cards-subtitle {
-  font-weight: bold;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
