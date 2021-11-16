@@ -63,6 +63,12 @@ address {
   text-decoration: none;
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  text-align: center;
+}
+
 /* -------------------------------- Header---------------------------- */
 
 .header {
@@ -130,13 +136,16 @@ address {
 
 .header-link:hover,
 .header-contact-info-link:hover,
-.mail-phone-info:hover,
 .header-link:focus,
-.header-contact-info-link:focus,
-.mail-phone-info:focus {
+.header-contact-info-link:focus {
   color: var(--accent-color);
   padding-top: 32px;
   padding-bottom: 32px;
+}
+
+.mail-phone-info:hover,
+.mail-phone-info:focus {
+  color: var(--accent-color);
 }
 
 .header-contact-info-link {
@@ -158,8 +167,6 @@ address {
 /* ---------------------------- Hero ----------------------------- */
 
 .hero {
-  padding-top: 94px;
-  padding-bottom: 94px;
   text-align: center;
 
   background-color: var(--second-bg-color);
@@ -216,17 +223,12 @@ address {
   margin: -1px;
 }
 
-.special-qualities {
-  margin-top: 94px;
-}
-
 .special-qualities-list {
   display: flex;
 }
 
 .special-qualities-item {
   margin-right: 30px;
-  margin-bottom: 94px;
   width: 270px;
   height: 101px;
 }
@@ -254,6 +256,10 @@ address {
 
 /*----------------------------- What We Do ----------------------------- */
 
+.what-we-do {
+  padding-top: 0;
+}
+
 .what-we-do-list {
   display: flex;
 }
@@ -277,23 +283,28 @@ address {
 
 .our-team {
   background-color: var(--third-bg-color);
-  width: 1600px;
-  height: 648px;
-  margin-top: 94px;
+}
+
+.our-team-header {
   text-align: center;
 }
 
 .our-team-list {
   display: flex;
   text-align: center;
-  margin-top: 94px;
-  margin-bottom: 94px;
 }
 
 .our-team-item {
   background-color: var(--current-white-color);
   width: 270px;
   height: 368px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.our-team-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .our-team-title {
@@ -303,6 +314,8 @@ address {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-title-color);
+  padding-top: 30px;
+  margin: 0 0 10px 0;
 }
 
 .our-team-subtitle {
@@ -312,12 +325,20 @@ address {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--first-text-color);
+  padding-bottom: 30px;
 }
 
 /* ----------------------------------- Footer------------------------------- */
 
 .footer {
   background-color: var(--second-bg-color);
+  padding: 60px 0;
+}
+
+.container > .logo.link {
+  display: block;
+  padding: 0;
+  margin: 0 0 20px 0;
 }
 
 .logo-studio-footer {
@@ -325,21 +346,42 @@ address {
 }
 
 .address-info {
+  display: block;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--current-white-color);
+
+  margin-bottom: 9px;
+}
+
+.footer-list {
+  display: block;
+}
+
+.footer-list:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .mail-phone-info {
+  display: block;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--footer-contact-color);
+}
+
+.footer-link:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.container > .logo {
+  padding: 0;
+  margin: 0 0 20px 0;
 }
 
 /*  -*-*-*-*-*-*-*-*-*-*-*-*-*- Portfolio Page -*-*-*-*-*-*-*-*-*-*-*-*-*-   */
@@ -356,6 +398,11 @@ address {
   background-color: var(--third-bg-color);
   border: 0;
   border-radius: 4px;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+
+  min-width: 73px;
 }
 
 .filter-button:hover,
@@ -366,6 +413,14 @@ address {
 }
 
 /* ------------------------------- Cards ---------------------------------*/
+
+.filter-list {
+  display: flex;
+}
+
+.filter-list > filter.item:not(:last-child) {
+  margin-right: 8px;
+}
 
 .cards-list {
   display: flex;
