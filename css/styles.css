@@ -103,8 +103,10 @@ address {
 .header-contact-info {
   display: flex;
   margin-left: auto;
-  padding-top: 32px;
-  padding-bottom: 32px;
+}
+
+.header-contact-info-link {
+  padding: 32px 0;
 }
 
 .header-container {
@@ -391,7 +393,11 @@ address {
   color: var(--footer-contact-color);
 }
 
-.footer-item:not(:last-child) {
+/* .footer-link:first-child {
+  margin-bottom: 9px;
+} */
+
+.footer-link:not(:last-child) {
   margin-bottom: 9px;
 }
 
@@ -404,10 +410,8 @@ address {
 
 .filter-button {
   cursor: pointer;
-  min-height: 38px;
   min-width: 73px;
-  padding-left: 22px;
-  padding-right: 22px;
+  padding: 6px 22px;
   font-family: inherit;
   font-style: inherit;
   font-weight: 500;
@@ -444,9 +448,6 @@ address {
   margin-right: 8px;
 }
 
-.filter-button {
-}
-
 .cards-list {
   display: flex;
   flex-wrap: wrap;
@@ -460,12 +461,16 @@ address {
 
 .cards-item .card-data {
   border: 1px solid var(--border-color);
-  border-top: 1px solid transparent;
+  border-top: 0;
   padding: 20px 24px;
 }
 
 .cards-item:nth-child(3n) {
-  margin-right: 0px;
+  margin-right: 0;
+}
+
+.cards-item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
 }
 
 .card-data {
